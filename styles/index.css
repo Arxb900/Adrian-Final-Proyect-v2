@@ -1,0 +1,702 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f1f21;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/*Container*/
+
+.Grid {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto auto; /* Alto de Contenedor*/
+  grid-template-columns: repeat(6, 1fr); /*Ancho de Contenedor*/
+  grid-template-areas:
+    "header header header header header header"
+    "nav nav nav nav nav nav"
+    "main main main main main main"
+    "section section section section section section"
+    "footer footer footer footer footer footer";
+}
+
+/*--------------------------------------------*/
+
+.error {
+  color: red;
+  font-size: 20px;
+  display: block;
+  margin-top: -10px;
+  margin-bottom: 10px;
+}
+
+/*--------------------------------------------*/
+
+/* Encabezado */
+
+.encabezado {
+  grid-area: header;
+  background-color: #1f1f21;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  font-size: xx-large;
+  font-style: italic;
+}
+
+/* Logo Encabezado Tijeras*/
+
+.logo {
+  width: 200px;
+  height: 100px;
+}
+
+/* Logo de Facebook e Instagram*/
+
+.logo1,
+.logo2 {
+  padding: 10px;
+  width: 50px;
+  height: 50px;
+}
+
+/* Navegador */
+
+.navegador {
+  grid-area: nav;
+}
+
+/* Barra del Navegador */
+
+.sub-navegador {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* Menu del Navegador*/
+
+.sub-navegador1,
+.sub-navegador2,
+.sub-navegador3 {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: x-large;
+}
+
+/* Menu-Links*/
+
+.sub-navegador1 a,
+.sub-navegador2 a,
+.sub-navegador3 a {
+  text-decoration: none;
+  color: white;
+  width: 550px;
+  text-align: center;
+}
+
+/*Cambio de color Menu Hover*/
+
+.sub-navegador1:hover,
+.sub-navegador2:hover,
+.sub-navegador3:hover {
+  background-color: white;
+  color: black;
+}
+
+/*Cambio de color Menu-Links Hover*/
+
+.sub-navegador1 a:hover,
+.sub-navegador2 a:hover,
+.sub-navegador3 a:hover {
+  transition: 0.05s;
+  color: black;
+  background-color: white;
+}
+
+/*Cambio de color Links*/
+
+.link-color {
+  text-decoration: none;
+  color: white;
+  padding: 35px;
+}
+
+/* Creacion del Main*/
+
+main {
+  grid-area: main;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Creacion del Banner */
+
+.banner1,
+.banner2,
+.banner3 {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen dentro del Banner */
+
+.banner1 img,
+.banner2 img,
+.banner3 img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Titulo1, Titulo2, Titulo3 */
+
+.titulo1,
+.titulo2,
+.titulo3 {
+  font-size: 40px;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  width: 500px;
+}
+
+/* Subtitulo1, Subtitulo2, Subtitulo3 */
+
+.subtitulo1,
+.subtitulo2,
+.subtitulo3 {
+  font-size: 28px;
+  font-style: italic;
+  text-align: center;
+  color: white;
+  width: 500px;
+}
+
+/* Pie de Pagina */
+
+footer {
+  grid-area: footer;
+  background-color: #000000;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  object-fit: cover;
+  font-size: xx-large;
+  font-style: italic;
+}
+
+/* Slider Image 1,2,3 Banner*/
+
+.slider1 img,
+.slider2 img,
+.slider3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slider 1,2,3 Banner*/
+
+.slider1,
+.slider2,
+.slider3 {
+  position: relative;
+  max-width: 600px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+}
+
+.slide.active {
+  display: block;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*Formulario*/
+
+.formulario {
+  color: rgb(0, 0, 0);
+  padding: 40px;
+  text-align: center;
+  background-color: #b3a04a;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 80%;
+  padding: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  font-family: inherit;
+  font-size: 16px;
+}
+
+.formulario button {
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 16px;
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.formulario button:hover {
+  background-color: #ddd;
+}
+
+/*Telefono Oculto*/
+
+.telefono-oculto {
+  display: none;
+  margin-left: 20px;
+  font-size: large;
+  color: #fff;
+  background-color: #333;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.telefono-visible {
+  display: inline-block;
+}
+
+/* Media Query para pantallas de Laptop (pantallas grandes, Laptop L) */
+
+@media screen and (min-width: 1440px) {
+  /* Ajustamos la cuadrícula de la página */
+
+  .Grid {
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Reducir márgenes y paddings del encabezado */
+
+  .encabezado {
+    padding: 20px 300px;
+    font-size: 30px;
+    flex-direction: row; 
+    justify-content: space-between; 
+  }
+
+  /* Ajustes en los logos */
+
+  .logo {
+    width: 180px;
+    height: 90px;
+  }
+
+  .logo1, .logo2 {
+    width: 80px;
+    height: 80px;
+  }
+
+  /* Modificar el tamaño de los enlaces de navegación */
+
+  .sub-navegador1, .sub-navegador2, .sub-navegador3 {
+    font-size: 22px;
+    padding: 20px 0;
+  }
+
+  /* Enlaces del subnavegador */
+
+  .sub-navegador1 a, .sub-navegador2 a, .sub-navegador3 a {
+    width: auto;
+    padding: 0 20px;
+    text-align: center;
+  }
+
+  /* Modificar el tamaño de los banners */
+
+  .titulo1, .titulo2, .titulo3 {
+    font-size: 35px;
+  }
+
+  .subtitulo1, .subtitulo2, .subtitulo3 {
+    font-size: 24px;
+  }
+
+  /* Ajustar el formulario */
+
+  .formulario input, .formulario textarea {
+    width: 70%;
+    padding: 12px;
+  }
+
+  .formulario label {
+    font-size: 20px;
+  }
+
+  .formulario button {
+    font-size: 18px;
+  }
+
+  .telefono-oculto {
+    font-size: x-large;
+  }
+
+  /* Ajustar el pie de página */
+
+  .pie-pagina {
+    font-size: 18px;
+  }
+
+  /* Ajustes de la galería */
+
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .galeria img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Ajustes de la imagen del slider */ 
+
+  .slider1, .slider2, .slider3 {
+    margin: 50px auto;
+    max-width: 85%;
+  }
+
+  main {
+    padding: 0;
+    margin: 0;
+  }
+
+  .navegador {
+    margin-bottom: 0;
+  }
+}
+
+/* Media Query para pantallas de Laptop (pantallas Medianas, Laptop ) */
+
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  /* Ajustamos la cuadrícula de la página */
+
+  .Grid {
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Reducir márgenes y paddings del encabezado */
+
+  .encabezado {
+    padding: 20px 250px;
+    font-size: 25px;
+    flex-direction: row; 
+    justify-content: space-between; 
+  }
+
+  /* Ajustes en los logos */
+
+  .logo {
+    width: 100px;
+    height: 80px;
+  }
+
+  .logo1, .logo2 {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Modificar el tamaño de los enlaces de navegación */
+
+  .sub-navegador1, .sub-navegador2, .sub-navegador3 {
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  /* Enlaces del subnavegador */
+
+  .sub-navegador1 a, .sub-navegador2 a, .sub-navegador3 a {
+    width: auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Modificar el tamaño de los banners */
+
+  .titulo1, .titulo2, .titulo3 {
+    font-size: 30px;
+  }
+
+  .subtitulo1, .subtitulo2, .subtitulo3 {
+    font-size: 20px;
+  }
+
+  /* Ajustar el formulario */
+
+  .formulario input, .formulario textarea {
+    width: 70%;
+    padding: 10px;
+  }
+
+  .formulario label {
+    font-size: 20px;
+  }
+
+  .formulario button {
+    font-size: 20px;
+  }
+
+  .telefono-oculto {
+    font-size: x-large;
+  }
+
+  /* Ajustar el pie de página */
+
+  .pie-pagina {
+    font-size: 15px;
+  }
+
+  /* Ajustes de la galería */
+
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .galeria img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Ajustes de la imagen del slider */
+
+  .slider1, .slider2, .slider3 {
+    margin: 50px auto;
+    max-width: 65%;
+  }
+
+  main {
+    padding: 0;
+    margin: 0;
+  }
+
+  .navegador {
+    margin-bottom: 0;
+  }
+
+}
+
+/*Media Query para pantallas de Tablets*/
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  /* Ajustamos la cuadrícula de la página */
+
+  .Grid {
+    grid-template-columns: repeat(6, 1fr);
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  /* Reducir márgenes y paddings del encabezado */
+
+  .encabezado {
+    padding: 10px 190px;
+    font-size: 20px;
+    flex-direction: row; 
+    justify-content: space-between; 
+  }
+
+  /* Ajustes en los logos */
+
+  .logo {
+    width: 100px;
+    height: 80px;
+  }
+
+  .logo1, .logo2 {
+    width: 60px;
+    height: 60px;
+  }
+
+  /* Modificar el tamaño de los enlaces de navegación */
+
+  .sub-navegador1, .sub-navegador2, .sub-navegador3 {
+    font-size: 18px;
+    padding: 15px;
+  }
+
+  /* Enlaces del subnavegador */
+
+  .sub-navegador1 a, .sub-navegador2 a, .sub-navegador3 a {
+    width: auto;
+    padding: 0;
+    text-align: center;
+  }
+
+  /* Modificar el tamaño de los banners */
+
+  .titulo1, .titulo2, .titulo3 {
+    font-size: 25px;
+  }
+
+  .subtitulo1, .subtitulo2, .subtitulo3 {
+    font-size: 18px;
+  }
+
+  /* Ajustar el formulario */
+
+  .formulario input, .formulario textarea {
+    width: 70%;
+    padding: 10px;
+  }
+
+  .formulario label {
+    font-size: 18px;
+  }
+
+  .formulario button {
+    font-size: 18px;
+  }
+
+  .telefono-oculto {
+    font-size: large;
+  }
+
+  /* Ajustar el pie de página */
+
+  .pie-pagina {
+    font-size: 13px;
+  }
+
+  /* Ajustes de la galería */
+
+  .galeria {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .galeria img {
+    width: 100%;
+    height: auto;
+  }
+
+  /* Ajustes de la imagen del slider */
+
+  .slider1, .slider2, .slider3 {
+    margin: 45px auto;
+    max-width: 65%;
+  }
+
+  main {
+    padding: 0;
+    margin: 0;
+  }
+
+  .navegador {
+    margin-bottom: 0;
+  }
+
+}
+
+/* Media Queries para pantallas móviles */
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .encabezado {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .encabezado .logo, .encabezado .logo1, .encabezado .logo2 {
+    max-width: 40px;
+  }
+
+  .sub-navegador a {
+    font-size: 1em;
+  }
+
+  .sub-navegador {
+    flex-direction: column;
+  }
+
+  .banner1, .banner2, .banner3 {
+    padding: 20px 0;
+  }
+
+  .titulo1, .titulo2, .titulo3 {
+    font-size: 1.5em;
+  }
+
+  .subtitulo1, .subtitulo2, .subtitulo3 {
+    font-size: 0.9em;
+  }
+
+  .formulario h1 {
+    font-size: 1.8em;
+  }
+
+  button {
+    padding: 10px 20px;
+  }
+
+  .footer {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+}
